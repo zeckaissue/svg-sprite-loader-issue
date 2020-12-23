@@ -5,7 +5,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 const glob = require("glob").sync;
 
-// const webpackMode = argv.production ? "production" : "development";
 module.exports = {
   entry: {
     sprite: glob(path.resolve(__dirname, "src/img/svg/*.svg")),
@@ -17,7 +16,6 @@ module.exports = {
   resolve: {
     extensions: [".js", ".scss", ".json", "svg"],
     alias: {
-      // !!! dont forget to add alias to jsconfig.json for intelisens
       "@": path.resolve(__dirname, "src/"),
     },
   },
@@ -29,7 +27,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /src\/img\/svg\/.*\.svg$/, // your icons directory
+        test: /src\/img\/svg\/.*\.svg$/,
         use: [
           {
             loader: "svg-sprite-loader",
