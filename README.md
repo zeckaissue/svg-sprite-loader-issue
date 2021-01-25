@@ -5,6 +5,8 @@
 - svg-sprite-loader version: ^5.2.1
 - OS type & version: Mac OS Mojave (10.14.6)
 
+issue link: https://github.com/JetBrains/svg-sprite-loader/issues/427
+
 # How to reproduce
 
 ```sh
